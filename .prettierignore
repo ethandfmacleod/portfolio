@@ -5,5 +5,6 @@ Coverage
 # Ignore shadcn components - as these are generated
 src/components/ui/*
 
-# Temporary
-.github/workflows/
+# Don't include .yml files
+*.yml
+*.yaml
