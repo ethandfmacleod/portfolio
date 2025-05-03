@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23  # Adjust if needed
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Linting (ESLint)
+        run: npm run lint
+
+      - name: Run Prettier (format:check)
+        run: npm run format:check
+
+      - name: Run Commitlint (push event - latest commit)
+        if: github.event_name == 'push'
+        run: |
+          echo "Checking latest commit for push event..."
+          npx commitlint --from=HEAD~1 --to=HEAD --verbose
+
+      - name: Run Commitlint (pull_request - all commits in PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "Checking all commits in PR from ${{ github.event.pull_request.base.sha }} to HEAD"
+          npx commitlint --from=${{ github.event.pull_request.base.sha }} --to=HEAD --verbose
