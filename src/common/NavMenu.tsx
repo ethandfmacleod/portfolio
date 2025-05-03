@@ -1,15 +1,22 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
-import { ListItem } from "./NavMenuListItem";
-
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu'
+import { Link } from 'react-router-dom'
+import { ListItem } from './NavMenuListItem'
+import React from 'react'
 
 // Navigation Menu dropdown items
 const components: { title: string; href: string; description: string }[] = [
     {
-        title: "Honors Project Work",
-        href: "/honors",
-        description:
-            "A compilation of documents made for my honors project.",
+        title: 'Honors Project Work',
+        href: '/honors',
+        description: 'A compilation of documents made for my honors project.',
     },
 ]
 
@@ -32,18 +39,27 @@ export function NavMenu() {
                                                 Pinch Analysis
                                             </div>
                                             <p className="text-sm leading-tight text-muted-foreground">
-                                                My magnum opus: The Pinch Analysis System
+                                                My magnum opus: The Pinch
+                                                Analysis System
                                             </p>
                                         </a>
                                     </NavigationMenuLink>
                                 </li>
                                 <ListItem href="/docs" title="Introduction">
-                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                    Re-usable components built using Radix UI
+                                    and Tailwind CSS.
                                 </ListItem>
-                                <ListItem href="/docs/installation" title="Installation">
-                                    How to install dependencies and structure your app.
+                                <ListItem
+                                    href="/docs/installation"
+                                    title="Installation"
+                                >
+                                    How to install dependencies and structure
+                                    your app.
                                 </ListItem>
-                                <ListItem href="/docs/primitives/typography" title="Typography">
+                                <ListItem
+                                    href="/docs/primitives/typography"
+                                    title="Typography"
+                                >
                                     Styles for headings, paragraphs, lists...etc
                                 </ListItem>
                             </ul>
@@ -67,7 +83,9 @@ export function NavMenu() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link to="https://github.com/ethandfmacleod">
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <NavigationMenuLink
+                                className={navigationMenuTriggerStyle()}
+                            >
                                 GitHub
                             </NavigationMenuLink>
                         </Link>

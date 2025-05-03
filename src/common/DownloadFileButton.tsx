@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { FaFileDownload } from "react-icons/fa"
+import { Button } from '@/components/ui/button'
+import { FaFileDownload } from 'react-icons/fa'
+import React from 'react'
 
 interface DownloadFileButtonProps {
     text: string
@@ -9,7 +10,7 @@ interface DownloadFileButtonProps {
 
 function DownloadFileButton({ text, href, file }: DownloadFileButtonProps) {
     return (
-        <a href={href} download={file} className='p-0 m-0'>
+        <a href={href} download={file} className="p-0 m-0">
             <Button className="justify-between px-4 bg-transparent hover:bg-yellow-600 border-2 border-white w-full">
                 {text}
                 <FaFileDownload />

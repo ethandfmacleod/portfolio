@@ -1,10 +1,8 @@
-
 interface PDFViewerProps {
-    document: string;
+    document: string
 }
 
 function PDFViewer(props: PDFViewerProps) {
-
     return (
         <div>
             <object
@@ -13,10 +11,12 @@ function PDFViewer(props: PDFViewerProps) {
                 type="application/pdf"
             />
             <div className="border-4 border-red-800 rounded-lg bg-gray-800 p-4 md:hidden">
-                If you are seeing this, online PDF preview isn't compatible with your browser. Please consider switching to desktop or downloading directly above.
+                If you are seeing this, online PDF preview isn&rsquo;t compatible with
+                your browser. Please consider switching to desktop or
+                downloading directly above.
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default PDFViewer

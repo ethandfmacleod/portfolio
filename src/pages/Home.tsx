@@ -1,7 +1,3 @@
 export function Home() {
-    return (
-        <>
-            Home
-        </>
-    )
+    return <>Home</>
 }

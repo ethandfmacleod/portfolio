@@ -1,7 +1,6 @@
-import { Footer } from "@/common/Footer";
-import { NavBar } from "@/common/Navbar";
-import { Outlet } from "react-router-dom";
-
+import { Footer } from '@/common/Footer'
+import { NavBar } from '@/common/Navbar'
+import { Outlet } from 'react-router-dom'
 
 export const Layout = () => {
     return (
