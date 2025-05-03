@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/navigation-menu'
 import { Link } from 'react-router-dom'
 import { ListItem } from './NavMenuListItem'
-import React from 'react'
 
 // Navigation Menu dropdown items
 const components: { title: string; href: string; description: string }[] = [

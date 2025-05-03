@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
-import React from 'react'
 
 export function Footer() {
     return (

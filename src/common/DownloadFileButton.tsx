@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { FaFileDownload } from 'react-icons/fa'
-import React from 'react'
 
 interface DownloadFileButtonProps {
     text: string
