@@ -1,4 +1,4 @@
-import { PDFButton, PDFButtonProps } from './PDFButton'
+import { PDFButton, PDFButtonProps } from '@common/PDFButton'
 
 interface PDFButtonsProps {
     selectedDocument: number
