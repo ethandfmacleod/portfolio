@@ -6,9 +6,9 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
+} from '@ui/navigation-menu'
 import { Link } from 'react-router-dom'
-import { ListItem } from './NavMenuListItem'
+import { ListItem } from '@common/NavMenuListItem'
 
 // Navigation Menu dropdown items
 const components: { title: string; href: string; description: string }[] = [
@@ -38,8 +38,9 @@ export function NavMenu() {
                                                 Pinch Analysis
                                             </div>
                                             <p className="text-sm leading-tight text-muted-foreground">
-                                                My magnum opus: The Pinch
-                                                Analysis System
+                                                A modular service for heat
+                                                optimization in industrial
+                                                processes.
                                             </p>
                                         </a>
                                     </NavigationMenuLink>

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@ui/button'
 import { FaFileDownload } from 'react-icons/fa'
 
 interface DownloadFileButtonProps {

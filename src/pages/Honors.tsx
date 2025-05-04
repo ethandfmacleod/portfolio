@@ -1,7 +1,7 @@
-import DownloadFileButton from '@/common/DownloadFileButton'
-import PDFButtons from '@/common/PDFButtons'
-import PDFViewer from '@/common/PDFViewer'
-import { Separator } from '@/components/ui/separator'
+import DownloadFileButton from '@common/DownloadFileButton'
+import PDFButtons from '@common/PDFButtons'
+import PDFViewer from '@common/PDFViewer'
+import { Separator } from '@ui/separator'
 import { useState } from 'react'
 import { FaArrowTurnDown } from 'react-icons/fa6'
 

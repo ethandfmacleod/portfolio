@@ -1,5 +1,5 @@
-import { ModeToggle } from '@/components/mode-toggle'
-import { NavMenu } from './NavMenu'
+import { ModeToggle } from '@components/mode-toggle'
+import { NavMenu } from '@common/NavMenu'
 import Logo from '/logo.svg'
 
 export function NavBar() {

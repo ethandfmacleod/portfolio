@@ -5,6 +5,9 @@ Coverage
 # Ignore shadcn components - as these are generated
 src/components/ui/*
 
-# Don't include .yml files
+# Don't format .yml files
 *.yml
 *.yaml
+
+# Vite cache
+.vite/

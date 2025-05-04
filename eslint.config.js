@@ -6,6 +6,9 @@ import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
     {
+        ignores: ['dist/*', 'build/*', '.vite/*'],
+    },
+    {
         files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
         plugins: { js },
         extends: ['js/recommended'],
