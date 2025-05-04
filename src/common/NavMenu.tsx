@@ -9,15 +9,7 @@ import {
 } from '@ui/navigation-menu'
 import { Link } from 'react-router-dom'
 import { ListItem } from '@common/NavMenuListItem'
-
-// Navigation Menu dropdown items
-const components: { title: string; href: string; description: string }[] = [
-    {
-        title: 'Honors Project Work',
-        href: '/honors',
-        description: 'A compilation of documents made for my honors project.',
-    },
-]
+import { otherNavItems, projectNavItems } from '@config/menu'
 
 export function NavMenu() {
     return (
@@ -45,31 +37,23 @@ export function NavMenu() {
                                         </a>
                                     </NavigationMenuLink>
                                 </li>
-                                <ListItem href="/docs" title="Introduction">
-                                    Re-usable components built using Radix UI
-                                    and Tailwind CSS.
-                                </ListItem>
-                                <ListItem
-                                    href="/docs/installation"
-                                    title="Installation"
-                                >
-                                    How to install dependencies and structure
-                                    your app.
-                                </ListItem>
-                                <ListItem
-                                    href="/docs/primitives/typography"
-                                    title="Typography"
-                                >
-                                    Styles for headings, paragraphs, lists...etc
-                                </ListItem>
+                                {projectNavItems.map((component) => (
+                                    <ListItem
+                                        key={component.title}
+                                        title={component.title}
+                                        href={component.href}
+                                    >
+                                        {component.description}
+                                    </ListItem>
+                                ))}
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>Other</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                {components.map((component) => (
+                            <ul className="grid w-[300px] gap-3 p-4">
+                                {otherNavItems.map((component) => (
                                     <ListItem
                                         key={component.title}
                                         title={component.title}
@@ -87,6 +71,15 @@ export function NavMenu() {
                                 className={navigationMenuTriggerStyle()}
                             >
                                 GitHub
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link to="/about-me">
+                            <NavigationMenuLink
+                                className={navigationMenuTriggerStyle()}
+                            >
+                                About Me
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>

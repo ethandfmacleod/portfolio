@@ -10,7 +10,9 @@
             "@common/*": ["./common/*"],
             "@components/*": ["./components/*"],
             "@ui/*": ["./components/ui/*"],
-            "@lib/*": ["./lib/*"]
+            "@lib/*": ["./lib/*"],
+            "@config/*": ["./config/*"],
+            "@pages/*": ["./pages/*"]
         },
 
         /* Bundler mode */

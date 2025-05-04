@@ -1,16 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Layout } from './pages/Layout'
-import { Home } from './pages/Home'
-import Honors from './pages/Honors'
+import { Layout } from '@pages/Layout'
+import { Home } from '@pages/Home'
 import { ThemeProvider } from '@components/theme-provider'
+import { appRoutes } from '@config/routes'
 
 function App() {
-    // Page Routes. Required later for production build
     const routes = (
         <>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="honors" element={<Honors />} />
+                {appRoutes.map((route, index) => {
+                    return (
+                        <Route
+                            key={index}
+                            path={route.path}
+                            element={<route.component />}
+                        />
+                    )
+                })}
             </Route>
         </>
     )
